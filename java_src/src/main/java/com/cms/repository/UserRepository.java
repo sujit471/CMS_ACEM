@@ -18,5 +18,4 @@ public interface UserRepository extends JpaRepository<User, Long> {
             nativeQuery = true)
     List<User> findAll();
 
-    User getUserByIdIs(Long id);
 }

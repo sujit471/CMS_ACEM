@@ -71,9 +71,12 @@ public class SubjectServiceImpl implements SubjectService {
 
     @Override
     public Response update(Subject subject) {
-        Optional<Subject> optionalSubject = subjectRepository.findById(subject.getId());
+
         Response responseBody = null;
         try {
+            subjectRepository.findById(subject.getId());
+            subject.setStatus(true);
+            subjectRepository.save(subject);
             responseBody = ResponseBuilder.success(ResponseMessageConstant.Subject.UPDATED, subject);
         } catch (Exception exception) {
             responseBody = ResponseBuilder.notFound(ResponseMessageConstant.Subject.NOT_UPDATED);
@@ -87,6 +90,7 @@ public class SubjectServiceImpl implements SubjectService {
         Subject subject = optionalSubject.get();
         Response responseBody = null;
         try {
+            subjectRepository.deleteById(id);
             responseBody = ResponseBuilder.success(ResponseMessageConstant.Subject.DELETED,subject);
         } catch (Exception exception) {
             responseBody = ResponseBuilder.notFound(ResponseMessageConstant.Subject.NOT_DELETED);
