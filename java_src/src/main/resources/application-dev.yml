@@ -3,8 +3,8 @@ server:
 spring:
   datasource:
     url: ${url}
-    username: ${username}
-    password: ${password}
+    username: ${root}
+    password: ${shrestha}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     generate-ddl: true
