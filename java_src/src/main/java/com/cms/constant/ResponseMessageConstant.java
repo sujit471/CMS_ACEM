@@ -4,8 +4,8 @@ public interface ResponseMessageConstant {
 
     interface User {
         String ONE = "User fetched successfully";
-        String ALL = "Students fetched successfully";
-        String NOT_FOUND = "Students not found";
+        String ALL = "Users fetched successfully";
+        String NOT_FOUND = "Users not found";
         String SAVED = "User saved successfully";
         String UPDATED = "User updated successfully";
         String NOT_SAVED = "User not saved";
