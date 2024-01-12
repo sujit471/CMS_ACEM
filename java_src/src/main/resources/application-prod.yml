@@ -1,8 +1,6 @@
-server:
-  port: 8081
 spring:
   datasource:
-    url: mysql://root:25fDEbe35FaDB5DHbb6CabA6Gbfe3FEb@monorail.proxy.rlwy.net:48379/railway
+    url: jdbc:myql://monorail.proxy.rlwy.net:48379/railway
     username: root
     password: 25fDEbe35FaDB5DHbb6CabA6Gbfe3FEb
     driver-class-name: com.mysql.cj.jdbc.Driver
